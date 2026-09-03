@@ -2,21 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-	<link rel="icon" type="image/png" href="doi_icon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doi — рисование и графический редактор: рисуй и украшай</title>
-<meta name="description" content="Doi — минималистичный графический редактор и рисовалка с виртуальной галереей. Создавай, украшай и ухаживай за своими картинами. Скачивай в RuStore.">
-<meta name="keywords" content="рисовалка, приложение для рисования Android, приложение для рисования на Android, приложение для рисования для Android, графический редактор, рисовалка для телефона, рисовалка для планшета, рисовалка для Android, приложение для рисования, рисование, художник, карандаш, ручка, искусство, графический редактор, минималистичный редактор, виртуальная галерея">
+    <link rel="icon" type="image/png" href="doi_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doi — рисование и графический редактор: рисуй и украшай</title>
+    <meta name="description" content="Doi — минималистичный графический редактор и рисовалка с виртуальной галереей. Создавай, украшай и ухаживай за своими картинами. Скачивай в RuStore.">
+    <meta name="keywords" content="рисовалка, приложение для рисования Android, приложение для рисования на Android, приложение для рисования для Android, графический редактор, рисовалка для телефона, рисовалка для планшета, рисовалка для Android, приложение для рисования, рисование, художник, карандаш, ручка, искусство, графический редактор, минималистичный редактор, виртуальная галерея">
 
-<!-- Open Graph (для соцсетей) -->
-<meta property="og:title" content="Doi — рисование и графический редактор: рисуй и украшай">
-<meta property="og:description" content="Рисуй, украшай, ухаживай за своими картинами. Виртуальная галерея с эффектом реальности и минималистичным редактором.">
-<meta property="og:image" content="https://malikg29malik-droid.github.io/preview.jpg"> <!-- Используй свою реальную картинку, а не плейсхолдер -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://malikg29malik-droid.github.io/">
-<meta property="og:locale" content="ru_RU">
+    <!-- Open Graph (для соцсетей) -->
+    <meta property="og:title" content="Doi — рисование и графический редактор: рисуй и украшай">
+    <meta property="og:description" content="Рисуй, украшай, ухаживай за своими картинами. Виртуальная галерея с эффектом реальности и минималистичным редактором.">
+    <meta property="og:image" content="https://malikg29malik-droid.github.io/preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://malikg29malik-droid.github.io/">
+    <meta property="og:locale" content="ru_RU">
 
-    <title>Doi — Рисовалка и графический редактор в RuStore</title>
+	<title>Doi - рисование и графический редактор</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,6 +45,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             padding-bottom: 70px;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -96,6 +97,8 @@
             justify-content: center;
             gap: 8px;
             white-space: nowrap;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -144,12 +147,11 @@
             padding: 16px;
             border-radius: var(--radius);
             border: 1px solid var(--border);
-            transition: transform 0.2s ease; /* убрано изменение цвета рамки при наведении */
+            transition: transform 0.2s ease;
         }
 
         .feature-mini-card:hover {
             transform: translateY(-2px);
-            /* рамка больше не меняет цвет на оранжевый */
         }
 
         .feature-mini-icon {
@@ -241,6 +243,28 @@
             margin: 0 auto 32px;
         }
 
+        /* Блок под последней кнопкой */
+        .direct-link-container {
+            margin-top: 14px;
+        }
+
+        .direct-link-text {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .direct-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .direct-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
         /* Плавающая нижняя панель для мобильных устройств */
         .mobile-sticky-cta {
             display: none;
@@ -269,16 +293,15 @@
             border-top: 1px solid var(--border);
         }
 
-	.mail {
-  text-decoration: none;          /* Убираем подчёркивание в обычном состоянии */
-  color: inherit;                 /* Опционально: чтобы цвет не конфликтовал */
-  transition: text-decoration 0.2s ease; /* Плавный эффект (по желанию) */
-}
+        .mail {
+            text-decoration: none;
+            color: inherit;
+            transition: text-decoration 0.2s ease;
+        }
 
-.mail:hover {
-  text-decoration: underline;    /* Добавляем при наведении */
-}
-
+        .mail:hover {
+            text-decoration: underline;
+        }
 
         /* Адаптивность для планшетов и мобильных */
         @media (max-width: 900px) {
@@ -325,7 +348,7 @@
                 <img src="doi_icon.png" alt="Doi Icon" class="app-icon-sm" onerror="this.src='https://via.placeholder.com/48'">
                 <span class="app-title-sm">Doi</span>
             </div>
-            <a href="https://www.rustore.ru/catalog/app/com.malik.apphome" target="_blank" class="btn rustore-badge">Скачать в RuStore</a>
+            <a href="#download-section" class="btn rustore-badge">Скачать бесплатно</a>
         </header>
 
         <!-- Hero Section -->
@@ -333,7 +356,7 @@
             <div class="hero-content">
                 <h1>Doi - не просто рисовалка, а <span>художественная мастерская с дополненной реальностью</span></h1>
 
-                <!-- Блоки преимуществ (с белыми плашками, ровной центровкой и без оранжевой рамки при наведении) -->
+                <!-- Блоки преимуществ -->
                 <div class="features-mini-grid">
                     <div class="feature-mini-card">
                         <div class="feature-mini-icon">✨</div>
@@ -373,8 +396,8 @@
                 </div>
 
                 <div class="hero-buttons">
-                    <a href="https://www.rustore.ru/catalog/app/com.malik.apphome" target="_blank" class="btn rustore-badge">
-                        <span>Скачать в RuStore</span>
+                    <a href="#download-section" class="btn rustore-badge">
+                        <span>Скачать бесплатно</span>
                     </a>
                 </div>
             </div>
@@ -387,15 +410,19 @@
             </div>
         </section>
 
-        <!-- Footer CTA Section -->
-        <section class="cta-footer">
+        <!-- Footer CTA Section (Последняя кнопка) -->
+        <section class="cta-footer" id="download-section">
             <h2>Начни свое творческое путешествие</h2>
             <p>Скачай Doi в RuStore прямо сейчас и замени свои скучные минуты на впечатляющие и незабываемые минуты жизни!</p>
             <a href="https://www.rustore.ru/catalog/app/com.malik.apphome" target="_blank" class="btn rustore-badge">Скачать в RuStore</a>
+            
+            <div class="direct-link-container">
+                <span class="direct-link-text">Нет RuStore? <a href="https://drive.google.com/file/d/1PGJWjlx_TRxJera46UD3EHqPd5jhdY-W/view?usp=drivesdk" target="_blank" class="direct-link">Скачать по прямой ссылке.</a></span>
+            </div>
         </section>
 
         <footer>
-	    <b>Почта: </b><a href="mailto:malik.gazetdinot@gmail.com" class="mail">malik.gazetdinot@gmail.com</a>
+            <b>Почта: </b><a href="mailto:malik.gazetdinot@gmail.com" class="mail">malik.gazetdinot@gmail.com</a>
         </footer>
     </div>
 
