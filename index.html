@@ -429,13 +429,19 @@
         </section>
 
         <!-- Footer CTA Section (Последняя кнопка) -->
+        <!-- Footer CTA Section (Последняя кнопка) -->
         <section class="cta-footer" id="download-section">
             <h2>Начни свое творческое путешествие</h2>
             <p>Скачивай Doi прямо сейчас и замени свои скучные минуты на впечатляющие и незабываемые минуты жизни!</p>
-            <a href="https://www.rustore.ru/catalog/app/com.malik.apphome" target="_blank" class="btn rustore-badge">Скачать в RuStore</a>
+            
+            <!-- Кнопка RuStore с отслеживанием -->
+            <a href="https://www.rustore.ru/catalog/app/com.malik.apphome" target="_blank" class="btn rustore-badge" onclick="ym(113392355, 'reachGoal', 'click_rustore'); return true;">Скачать в RuStore</a>
             
             <div class="direct-link-container">
-                <span class="direct-link-text">Нет RuStore? <a href="https://drive.google.com/file/d/1qjQvvkff_zFXt9kdUkb8RAaWT4GyM0yN/view?usp=drive_link" target="_blank" class="direct-link">Скачать по прямой ссылке</a></span>
+                <span class="direct-link-text">Нет RuStore? 
+                    <!-- Прямая ссылка с отслеживанием -->
+                    <a href="https://drive.google.com/file/d/1qjQvvkff_zFXt9kdUkb8RAaWT4GyM0yN/view?usp=drive_link" target="_blank" class="direct-link" onclick="ym(113392355, 'reachGoal', 'click_drive'); return true;">Скачать по прямой ссылке</a>
+                </span>
             </div>
         </section>
 
